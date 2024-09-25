@@ -8,11 +8,11 @@ def parse_arguments():
 	group = parser.add_mutually_exclusive_group(required=True)
 	group.add_argument(
 		'--id',
-		help="exact service ID (e.g., instagram, openai)"
+		help="exact service ID (e.g. instagram, openai)"
 	)
 	group.add_argument(
 		'--name',
-		help="name of the service to search for (e.g., Instagram, Google)"
+		help="name of the service to search for (e.g. Instagram, Google)"
 	)
 	parser.add_argument(
 		'--limit',
