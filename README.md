@@ -9,3 +9,6 @@ SimPrice is an efficient tool designed to help users find the most affordable vi
 - `name` — name of the service to search for (e.g. `Instagram`, `Google`)
 - `limit` — limit of the given prices (default: `10`)
 - `lang` — language for queries and results (default: `en`)
+
+### OS support
+At the moment, only Windows (`.exe`) is supported by default, but you can build the sources yourself or use the python script as is.
