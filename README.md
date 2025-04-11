@@ -1,14 +1,27 @@
-<h3 align="center"><img src="assets/showcase.png"></h3>
-<h1 align="center">SimPrice</h1>
-<p align="center">Get the cheapest numbers from OnlineSim effortlessly.</p></br>
+# Simgle
+Helps you save time and money by easily finding the cheapest virtual numbers on [OnlineSim](https://onlinesim.io).
 
-SimPrice is an efficient tool designed to help users find the most affordable virtual numbers from OnlineSim. It streamlines the process of comparing prices, enabling you to secure the best deals quickly and easily. With SimPrice, you can save time and money while accessing the virtual numbers you need.
+## Installation
+> [!IMPORTANT]
+> Make sure you have Python 3.9+ installed.
 
-### Options
-- `id` — exact service ID (e.g. `instagram`, `openai`)
-- `name` — name of the service to search for (e.g. `Instagram`, `Google`)
-- `limit` — limit of the given prices (default: `10`)
-- `lang` — language for queries and results (default: `en`)
+Install the utility from PyPI:
+```sh
+pip install simgle
+```
 
-### OS support
-At the moment, only Windows (`.exe`) is supported by default, but you can build the sources yourself or use the python script as is.
+## Usage
+After installing, you can use your utility like this:
+```sh
+simgle [arguments]
+```
+
+> [!TIP]
+> To see all available flags and arguments, run:
+> ```sh
+> simgle --help
+> ```
+> This will display a list of all the options and how to use them.
+
+## Preview
+![CLI showcase image](images/preview.png)
