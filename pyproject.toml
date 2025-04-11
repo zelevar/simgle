@@ -1,0 +1,24 @@
+[project]
+name = "simgle"
+version = "1.1.1"
+authors = [
+    { name="zelevar" },
+]
+description = "Save time and money by easily finding the cheapest virtual numbers on OnlineSim."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.32.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/zelevar/simgle"
+
+[project.scripts]
+simgle = "simgle.cli:main"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
