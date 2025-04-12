@@ -1,7 +1,8 @@
-from typing import Any, Optional
+from typing import Any, Literal, Optional
 
 import requests
 
+Language = Literal["fr", "de", "ru", "en", "zh"]
 PriceInfo = tuple[str, float, int]  # country, price, count
 ServiceInfo = tuple[str, str]  # id, name
 
@@ -10,16 +11,17 @@ def bold(text: str) -> str:
     return f"\033[1m{text}\033[0m"
 
 
-def fetch_countries(lang: str) -> dict[str, Any]:
+def fetch_countries(language: Language) -> dict[str, Any]:
     response = requests.get(
-        "https://onlinesim.io/api/getNumbersStats.php", {"country": "all", "lang": lang}
+        "https://onlinesim.io/api/getNumbersStats.php",
+        {"country": "all", "lang": language},
     )
     response.raise_for_status()
     return response.json()
 
 
 def find_service(
-    countries: dict[str, Any], id: str, name: str
+    countries: dict[str, Any], id: Optional[str], name: Optional[str]
 ) -> Optional[ServiceInfo]:
     checked_services: list[str] = []
     for country in countries.values():

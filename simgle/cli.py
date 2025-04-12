@@ -1,7 +1,8 @@
-from argparse import Namespace, ArgumentParser
 import sys
+from argparse import ArgumentParser, Namespace
+from typing import Optional
 
-from simgle.utils import fetch_countries, find_service, get_country_prices
+from simgle.utils import Language, fetch_countries, find_service, get_country_prices
 
 
 def parse_arguments() -> Namespace:
@@ -28,7 +29,10 @@ def parse_arguments() -> Namespace:
 
 def main() -> None:
     args = parse_arguments()
-    target_id, target_name, limit, language = args.id, args.name, args.limit, args.lang
+    target_id: Optional[str] = args.id
+    target_name: Optional[str] = args.name
+    limit: int = args.limit
+    language: Language = args.lang
 
     countries = fetch_countries(language)
     service = find_service(countries, target_id, target_name)
