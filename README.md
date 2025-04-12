@@ -11,7 +11,7 @@ pip install simgle
 ```
 
 ## Usage
-After installing, you can use your utility like this:
+After installing, you can use it like this:
 ```sh
 simgle [arguments]
 ```
@@ -23,5 +23,5 @@ simgle [arguments]
 > ```
 > This will display a list of all the options and how to use them.
 
-## Preview
-![CLI showcase image](images/preview.png)
+### Example
+![Usage showcase](https://raw.githubusercontent.com/zelevar/simgle/b5076c591e897e175c393a42d0e7491650ad87eb/images/showcase.png)
